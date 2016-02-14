@@ -1,6 +1,6 @@
 #Shyft-Extractor
 
-Shyft extractor is a customizable pluggable massively scalable incremental RDBMS extraction library for Hadoop.
+Shyft extractor is a customizable massively scalable incremental RDBMS extraction library for Hadoop.
 
 ##Strategies
 
