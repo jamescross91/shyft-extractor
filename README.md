@@ -9,3 +9,9 @@ The core of Shyft is it's incremental extraction interface.  Strategies are curr
 ##Technology
 
 The Shyft extractor makes use of a fully asynchronous pipeline based on the excellent work of Dave Moten and his RX-JDBC framework.
+
+##Maven
+
+##Useage examples
+
+##Support
