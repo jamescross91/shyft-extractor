@@ -1,5 +1,6 @@
 package model.keys;
 
+import api.Table;
 import fj.data.Option;
 import lombok.EqualsAndHashCode;
 import lombok.RequiredArgsConstructor;
@@ -7,6 +8,7 @@ import lombok.SneakyThrows;
 import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
 import model.source.Column;
+import model.source.Index;
 import model.source.Schema;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.RowMapperResultSetExtractor;
