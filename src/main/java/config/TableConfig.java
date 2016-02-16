@@ -1,5 +1,6 @@
 package config;
 
+import api.Table;
 import com.typesafe.config.Config;
 
 import java.util.List;
