@@ -1,15 +1,17 @@
 package model.keys;
 
 import api.Table;
-import fj.data.Stream;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import model.source.PrimaryKey;
+import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.RowMapperResultSetExtractor;
 
 import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.ResultSet;
+import java.util.List;
+import java.util.stream.Stream;
 
 @Slf4j
 public class FetchPrimaryKeys {
@@ -30,7 +32,9 @@ public class FetchPrimaryKeys {
         log.info("About to fetch column metadata for " + table.name);
         try (Connection connection = dataSource.getConnection();
              ResultSet resultSet = connection.getMetaData().getPrimaryKeys(null, null, table.name)) {
-            return Stream.iterableStream(new RowMapperResultSetExtractor<>(toPrimaryKey()).extractData(resultSet));
+            List<PrimaryKey> primaryKeys = new RowMapperResultSetExtractor<>(toPrimaryKey()).extractData(resultSet);
+
+            return primaryKeys.stream();
         }
     }
 }

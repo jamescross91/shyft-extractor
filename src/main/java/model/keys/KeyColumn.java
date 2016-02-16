@@ -1,23 +1,20 @@
 package model.keys;
 
+import api.Table;
 import fj.data.Stream;
-import husky.api.Table;
-import husky.model.source.Column;
-import husky.model.source.PrimaryKey;
-import husky.model.source.Schema;
+import model.source.PrimaryKey;
+import model.source.Schema;
 
 import javax.sql.DataSource;
 import java.util.List;
 
-import static com.google.common.collect.Lists.newArrayList;
-
 public class KeyColumn {
     private final FetchPrimaryKeys fetchPrimaryKeys;
-    private final FindSmallestUniqueIndex findSmallestUniqueIndex;
+    private final UniqueIndex uniqueIndex;
 
     public KeyColumn(DataSource dataSource) {
         this.fetchPrimaryKeys = new FetchPrimaryKeys(dataSource);
-        this.findSmallestUniqueIndex = new FindSmallestUniqueIndex(dataSource);
+        this.uniqueIndex = new UniqueIndex(dataSource);
     }
 
     public List<String> fetch(Table table, Schema schema) {
@@ -27,7 +24,7 @@ public class KeyColumn {
             return newArrayList(primaryKeys.map(primaryKey -> primaryKey.name));
         }
 
-        Stream<Column> smallestUniqueIndex = findSmallestUniqueIndex.of(schema, table);
+        Stream<Column> smallestUniqueIndex = uniqueIndex.findSmallest(schema, table);
 
         if (smallestUniqueIndex.isNotEmpty()) {
             return newArrayList(smallestUniqueIndex.map(column -> column.name));
