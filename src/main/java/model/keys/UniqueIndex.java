@@ -1,13 +1,13 @@
 package model.keys;
 
-import fj.Ord;
 import fj.data.Option;
-import fj.data.Stream;
 import lombok.EqualsAndHashCode;
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
 import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
+import model.source.Column;
+import model.source.Schema;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.RowMapperResultSetExtractor;
 
@@ -15,8 +15,7 @@ import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
-import static fj.data.Stream.iterableStream;
+import java.util.stream.Stream;
 
 @Slf4j
 public class UniqueIndex {
