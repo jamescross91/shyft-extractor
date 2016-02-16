@@ -1,13 +1,13 @@
 package api;
 
-import com.github.davidmoten.rx.jdbc.Database;
-import config.TableConfig;
-import datasource.CloseableDatasource;
-import fj.data.Option;
-import org.redisson.Redisson;
+        import com.github.davidmoten.rx.jdbc.Database;
+        import config.TableConfig;
+        import datasource.CloseableDatasource;
+        import fj.data.Option;
+        import org.redisson.Redisson;
 
-import java.util.List;
-import java.util.TimeZone;
+        import java.util.List;
+        import java.util.TimeZone;
 
 public class ExtractorClient {
     private final Redisson redisson;
