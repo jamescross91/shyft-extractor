@@ -22,7 +22,7 @@
         <c3p0.version>0.9.5</c3p0.version>
         <dbcp.version>2.1.1</dbcp.version>
         <hikari.version>2.4.3</hikari.version>
-
+        <spring-jdbc.version>4.2.2.RELEASE</spring-jdbc.version>
     </properties>
 
     <dependencies>
