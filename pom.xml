@@ -22,6 +22,7 @@
         <c3p0.version>0.9.5</c3p0.version>
         <dbcp.version>2.1.1</dbcp.version>
         <hikari.version>2.4.3</hikari.version>
+
     </properties>
 
     <dependencies>
@@ -95,6 +96,11 @@
             <groupId>com.zaxxer</groupId>
             <artifactId>HikariCP</artifactId>
             <version>${hikari.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>4.2.2.RELEASE</version>
         </dependency>
     </dependencies>
 </project>
