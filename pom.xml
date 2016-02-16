@@ -19,6 +19,7 @@
         <redission.version>2.2.8</redission.version>
         <functional-java.version>4.5</functional-java.version>
         <rx-jdbc.version>0.7</rx-jdbc.version>
+        <c3p0.version>0.9.5</c3p0.version>
     </properties>
 
     <dependencies>
@@ -77,6 +78,21 @@
             <groupId>com.github.davidmoten</groupId>
             <artifactId>rxjava-jdbc</artifactId>
             <version>${rx-jdbc.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.mchange</groupId>
+            <artifactId>c3p0</artifactId>
+            <version>${c3p0.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-dbcp2</artifactId>
+            <version>2.1.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.zaxxer</groupId>
+            <artifactId>HikariCP</artifactId>
+            <version>2.4.3</version>
         </dependency>
     </dependencies>
 </project>
