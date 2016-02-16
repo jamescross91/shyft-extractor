@@ -1,3 +1,5 @@
+[![Circle CI](https://circleci.com/gh/jamescross91/shyft-extractor.svg?style=shield)](https://circleci.com/gh/jamescross91/shyft-extractor)
+
 #Shyft-Extractor
 
 Shyft extractor is a customizable massively scalable incremental RDBMS extraction library for Hadoop.
