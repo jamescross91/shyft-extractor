@@ -1,4 +1,4 @@
-[![Circle CI](https://circleci.com/gh/jamescross91/shyft-extractor.svg?style=shield)](https://circleci.com/gh/jamescross91/shyft-extractor)
+[![Circle CI](https://circleci.com/gh/jamescross91/shyft-extractor.svg?style=shield)](https://circleci.com/gh/jamescross91/shyft-extractor) [![Code Climate](https://codeclimate.com/github/jamescross91/shyft-extractor/badges/gpa.svg)](https://codeclimate.com/github/jamescross91/shyft-extractor) [![Test Coverage](https://codeclimate.com/github/jamescross91/shyft-extractor/badges/coverage.svg)](https://codeclimate.com/github/jamescross91/shyft-extractor/coverage)
 
 #Shyft-Extractor
 
